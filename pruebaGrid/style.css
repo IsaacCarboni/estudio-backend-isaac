@@ -1,0 +1,27 @@
+
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr );
+    grid-template-rows: repeat(5, 100px);
+    
+    
+
+}
+ 
+.contenedor div{
+    background-color: red;
+    border: 1px solid black;
+    
+}
+
+.caja1{
+    grid-column: span 3;
+grid-row: span 2;
+}
+
+.caja2{
+    grid-row: span 2;
+}
+

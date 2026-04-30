@@ -1,0 +1,112 @@
+/* selector-propiedad-valor
+
+
+selector{
+propiedad:valor
+}
+
+*/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+   display: grid;
+   flex-direction: row;  /* Organiza los elementos de izquierda a derecha */
+   justify-content: center; /* Centra verticalmente en el contenedor */
+   align-items: center;     /* Centra horizontalmente en el contenedor */
+grid-template-columns: repeat(4, 1fr);
+gap: 5px;
+grid-template-rows: 100px 200px;
+ }
+ 
+.grid-item{
+
+
+  background-color: rgb(233, 107, 107);
+  border: 1px;
+  padding: 20% ;
+  text-align: center;
+  height: 50px;
+  border: 1px solid black;
+}
+.caja1{
+  grid-template-columns:span 3 ;
+}
+
+ h1 {
+   margin: 0 10px;  /* Elimina cualquier margen y agrega algo de espacio entre el texto y la imagen */
+ }
+ 
+ img {
+   width: 300px;  /* Ajusta la imagen para que no ocupe demasiado espacio */
+   height: 200px;     /* Mantiene la proporción de la imagen */
+ }
+ 
+
+ a {
+  
+   text-decoration: none;  /* Quita el subrayado por defecto de los enlaces */
+   display: inline-block;  /* Hace que los enlaces se comporten como bloques */
+   padding: 10px 20px;     /* Espaciado interno del "botón" */
+   margin: 5px;            /* Separación entre los botones */
+   background-color: #4CAF50;  /* Color de fondo verde */
+   color: white;           /* Color del texto blanco */
+   border-radius: 5px;     /* Bordes redondeados */
+   font-size: 16px;        /* Tamaño de fuente */
+   font-weight: bold;      /* Negrita en el texto */
+   transition: background-color 0.3s ease; /* Suaviza el cambio de color en hover */
+ }
+ 
+ a:hover {
+   background-color: red;  /* Cambia el fondo a rojo cuando se pasa el mouse */
+ }
+
+ .card {
+   width: 100%;             /* Ocupa todo el ancho disponible */
+   padding: 20px;           /* Espaciado interno */
+   background-color: #fff;  /* Fondo blanco para la tarjeta */
+   border-radius: 10px;     /* Bordes redondeados */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+   text-align: center;      /* Centra el texto */
+   box-sizing: border-box;  /* Incluye el padding en el cálculo del ancho */
+ }
+ 
+ .card h2 {
+   font-size: 24px;         /* Tamaño del texto */
+   color: #333;             
+   margin-bottom: 20px;     /* Espaciado entre el título y las imágenes */
+ }
+ 
+ .imagenes {
+   display: flex;                  /
+   justify-content:space-between;   
+   gap: 15px;                      
+ }
+ 
+ .imagenes img {
+   width: 32%;                      
+   height: auto;                    
+   border-radius: 8px;              
+   object-fit: cover;               
+ }
+ 
+ /*  Grid*/
+
+ .grid-container{
+  display: grid;
+  grid-template-columns:
+    1fr  1fr 1fr 1fr;  /* Definir columnas*/
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    border-color: #333;;
+    
+ }
+ 
+ .nav{
+  display: flex;
+  text-align: center;
+
+ }
+ 

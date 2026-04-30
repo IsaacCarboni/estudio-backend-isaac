@@ -1,0 +1,73 @@
+
+.contenedor {
+    display: flex;
+    flex-direction: row;  /* Organiza los elementos de izquierda a derecha */
+    justify-content: center; /* Centra verticalmente en el contenedor */
+    align-items: center;     /* Centra horizontalmente en el contenedor */
+ 
+  }
+  
+  h1 {
+    margin: 0 10px;  /* Elimina cualquier margen y agrega algo de espacio entre el texto y la imagen */
+  }
+  
+  img {
+    width: 300px;  /* Ajusta la imagen para que no ocupe demasiado espacio */
+    height: 200px;     /* Mantiene la proporción de la imagen */
+  }
+  
+ 
+  a {
+    text-decoration: none;  /* Quita el subrayado por defecto de los enlaces */
+    display: inline-block;  /* Hace que los enlaces se comporten como bloques */
+    padding: 10px 20px;     /* Espaciado interno del "botón" */
+    margin: 5px;            /* Separación entre los botones */
+    background-color: #4CAF50;  /* Color de fondo verde */
+    color: white;           /* Color del texto blanco */
+    border-radius: 5px;     /* Bordes redondeados */
+    font-size: 16px;        /* Tamaño de fuente */
+    font-weight: bold;      /* Negrita en el texto */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color en hover */
+  }
+  
+  a:hover {
+    background-color: red;  /* Cambia el fondo a rojo cuando se pasa el mouse */
+  }
+ 
+  .card {
+    width: 100%;             /* Ocupa todo el ancho disponible */
+    padding: 20px;           /* Espaciado interno */
+    background-color: #fff;  /* Fondo blanco para la tarjeta */
+    border-radius: 10px;     /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+    text-align: center;      /* Centra el texto */
+    box-sizing: border-box;  /* Incluye el padding en el cálculo del ancho */
+  }
+  
+  .card h2 {
+    font-size: 24px;         /* Tamaño del texto */
+    color: #333;             /* Color oscuro para el texto */
+    margin-bottom: 20px;     /* Espaciado entre el título y las imágenes */
+  }
+  
+  .imagenes {
+    display: flex;                  /* Usa flexbox para alinear las imágenes en fila */
+    justify-content: space-between;  /* Espacio entre las imágenes */
+    gap: 15px;                      /* Espaciado entre las imágenes */
+  }
+  
+  .imagenes img {
+    width: 32%;                      /* Hace que cada imagen ocupe un 32% del ancho del contenedor */
+    height: auto;                    /* Mantiene la proporción de la imagen */
+    border-radius: 8px;              /* Bordes redondeados en las imágenes */
+    object-fit: cover;               /* Asegura que las imágenes cubran su contenedor sin deformarse */
+  }
+  
+  /*  Grid*/
+ 
+  .grid-container{
+   display: grid;
+   grid-template-columns:
+   repeat(3, 1fr) ;  /* Definir columnas*/
+  }
+

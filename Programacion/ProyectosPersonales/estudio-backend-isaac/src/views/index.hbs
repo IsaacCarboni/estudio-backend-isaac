@@ -1,0 +1,30 @@
+{{!-- 1. Abrimos el bucle usando el nombre que mandamos desde app.js --}}
+{{#each productos}}
+    <div style="border: 1px solid #444; padding: 15px; margin-bottom: 10px; border-radius: 8px; background-color: #222;">
+        
+        {{!-- 2. Mostramos los datos usando los nombres EXACTOS del JSON --}}
+        <h2 style="color: gold; margin: 0;">{{this.corte}}</h2>
+        
+        <p style="font-size: 1.2rem; color: white;">
+            Stock: 
+            {{!-- Usamos el helper 'lt' que registramos en app.js para el color --}}
+            <span style="color: {{#if (lt this.stockKilos 5)}}#ff4d4d{{else}}#28a745{{/if}}; font-weight: bold;">
+                {{this.stockKilos}} kg
+            </span>
+            
+            {{#if (lt this.stockKilos 5)}} 
+                <span style="color: #ff4d4d; font-weight: bold;"> ⚠️ ¡PEDIR MÁS!</span> 
+            {{/if}}
+        </p>
+
+        <p style="color: #ccc;">Precio: ${{this.precio}} /kg | Categoría: {{this.categoria}}</p>
+
+        {{!-- 3. El formulario de venta con el ID dinámico --}}
+        <form action="/api/stock/vender/{{this.id}}" method="POST">
+            <button type="submit" style="background: #28a745; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%;">
+                VENDER 1kg 🥩
+            </button>
+        </form>
+    </div>
+{{/each}} 
+{{!-- 4. Cerramos el bucle --}}
